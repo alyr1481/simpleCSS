@@ -1,0 +1,25 @@
+$columnMinWidth: 0;
+$columnMaxWidth: 5000;
+
+@for $j from $columnMinWidth through $columnMaxWidth {
+  .row-#{$j} {
+    border: 2px solid magenta;
+    min-height: 50px;
+    max-height: 100%;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($j + px, 1fr));
+    grid-auto-flow: dense;
+  }
+}
+
+.col {
+  //   border: solid 2px mediumblue;
+}
+
+.card {
+  background-color: mediumseagreen;
+  border-radius: 5%;
+  height: 100%;
+  width: 100%;
+}
